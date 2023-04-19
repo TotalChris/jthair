@@ -6,6 +6,7 @@ JtMainCarouselTemplate.innerHTML = `
                 100% {transform: translateX(-50%);}
             }
             #carouselScaffold{
+                overflow: clip;
                 margin-inline: -0.5rem;
                 z-index: 0 !important;
                 -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,.2) 0, #000 15%, #000 85%, rgba(0,0,0,.2));
