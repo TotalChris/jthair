@@ -49,16 +49,16 @@ JtMainCarouselTemplate.innerHTML = `
         <div id="carouselScaffold">
             <div id='carouselTrack'>
                 <div id='carousel'>
-                    <img src="./src/assets/woman2.webp" class="childImage">
-                    <img src="./src/assets/woman1.webp" class="childImage">
-                    <img src="./src/assets/womenscut.webp" class="childImage">
-                    <img src="./src/assets/menscut.webp" class="childImage">
-                    <img src="./src/assets/tools.webp" class="childImage">
-                    <img src="./src/assets/woman1.webp" class="childImage">
-                    <img src="./src/assets/woman2.webp" class="childImage">
-                    <img src="./src/assets/womenscut.webp" class="childImage">
-                    <img src="./src/assets/menscut.webp" class="childImage">
-                    <img src="./src/assets/tools.webp" class="childImage">
+                    <img src="/assets/woman2.webp" class="childImage">
+                    <img src="/assets/woman1.webp" class="childImage">
+                    <img src="/assets/womenscut.webp" class="childImage">
+                    <img src="/assets/menscut.webp" class="childImage">
+                    <img src="/assets/tools.webp" class="childImage">
+                    <img src="/assets/woman1.webp" class="childImage">
+                    <img src="/assets/woman2.webp" class="childImage">
+                    <img src="/assets/womenscut.webp" class="childImage">
+                    <img src="/assets/menscut.webp" class="childImage">
+                    <img src="/assets/tools.webp" class="childImage">
                 </div>
             </div>
         </div>

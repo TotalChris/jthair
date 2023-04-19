@@ -10,7 +10,7 @@ JTNavbarTemplate.innerHTML = `
                     <i class="bi bi-list"></i>
                 </button>
                 <a href="/" class="flex flex-row h-full items-center">
-                    <img src="src/assets/logo.webp" alt="logo" class='h-12 md:ml-2 w-auto'/>
+                    <img src="/assets/logo.webp" alt="logo" class='h-12 md:ml-2 w-auto'/>
                 </a>
                 <a class="btn btn-ghost text-white text-2xl font-bold md:hidden h-14 hover:bg-neutral-800" href='tel:8105225028' aria-label="call">
                     <i class="bi bi-telephone"></i>

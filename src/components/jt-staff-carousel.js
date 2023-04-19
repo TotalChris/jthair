@@ -4,34 +4,34 @@ JTStaffCarouselTemplate.innerHTML = `
     <style>${stylesheet}</style>
         <div class="carousel carousel-center mx-auto w-full gap-8 overflow-y-hidden cursor-grab select-none" id="staffCarousel" style="scroll-behavior: auto; height: 300px;">
         <div class="carousel-item" style="padding-left: calc((100% - 300px) / 2);">
-            <img src="src/assets/team/jody.webp" height="300px" width="300px" class="rounded-full mx-auto transition-opacity select-none" draggable="false" alt="Jody" id="staff-0" data-staffid="0" />
+            <img src="/assets/team/jody.webp" height="300px" width="300px" class="rounded-full mx-auto transition-opacity select-none" draggable="false" alt="Jody" id="staff-0" data-staffid="0" />
         </div>
         <div class="carousel-item">
-            <img src="src/assets/team/aimee.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Aimee" id="staff-1" data-staffid="1" />
+            <img src="/assets/team/aimee.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Aimee" id="staff-1" data-staffid="1" />
         </div>
         <div class="carousel-item">
-            <img src="src/assets/team/carol.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Carol" id="staff-2" data-staffid="2" />
+            <img src="/assets/team/carol.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Carol" id="staff-2" data-staffid="2" />
         </div>
         <div class="carousel-item">
-            <img src="src/assets/team/dana.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Dana" id="staff-3" data-staffid="3" />
+            <img src="/assets/team/dana.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Dana" id="staff-3" data-staffid="3" />
         </div>
         <div class="carousel-item">
-            <img src="src/assets/team/kathy.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Kathy" id="staff-4" data-staffid="4" />
+            <img src="/assets/team/kathy.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Kathy" id="staff-4" data-staffid="4" />
         </div>
         <div class="carousel-item">
-            <img src="src/assets/team/krista.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Krista" id="staff-5" data-staffid="5"/>
+            <img src="/assets/team/krista.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Krista" id="staff-5" data-staffid="5"/>
         </div>
         <div class="carousel-item">
-            <img src="src/assets/team/laura.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Laura" id="staff-6" data-staffid="6"/>
+            <img src="/assets/team/laura.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Laura" id="staff-6" data-staffid="6"/>
         </div>
         <div class="carousel-item">
-            <img src="src/assets/team/lauren.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Lauren" id="staff-7" data-staffid="7"/>
+            <img src="/assets/team/lauren.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Lauren" id="staff-7" data-staffid="7"/>
         </div>
         <div class="carousel-item">
-            <img src="src/assets/team/stephanie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Stephanie" id="staff-8" data-staffid="8"/>
+            <img src="/assets/team/stephanie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Stephanie" id="staff-8" data-staffid="8"/>
         </div>
         <div class="carousel-item" style="padding-right: calc((100% - 300px) / 2)">
-            <img src="src/assets/team/valerie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Valerie" id="staff-9" data-staffid="9"/>
+            <img src="/assets/team/valerie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Valerie" id="staff-9" data-staffid="9"/>
         </div>
     </div>
     <div id="staffBio" class="px-4 min-h-12 min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto m-4">
