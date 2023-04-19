@@ -192,7 +192,7 @@ html, body, #root{
   color: #f0cb00;
 }
 .bg-jt-yellow{
-  background-color: #f0cb00;
+  background-color: #f0cb00 !important;
 }
 
 @media (prefers-contrast: more){
