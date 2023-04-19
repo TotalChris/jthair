@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/webp" href="/src/assets/logo.webp" />
+    <script type="module">
+      import './src/components/jt-navbar.js';
+      import './src/components/jt-main-carousel.js';
+      import './src/components/jt-service-list.js';
+      import './src/components/jt-service-card.js';
+      import './src/components/jt-staff-carousel.js';
+    </script>
+    <link rel="stylesheet" href="/src/styles/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JT Hair | Home</title>
+  </head>
+  <body>
+    <div id="root">
+      <jt-navbar></jt-navbar>
+      <div class='h-24 w-full'></div>
+      <div id="pageRoot" class="min-h-screen"></div>
+
+
+      <footer class="footer footer-center p-10 bg-neutral-800 text-neutral-content rounded w-full ">
+        <div class="grid grid-flow-col gap-4">
+          <a class="link link-hover" href="/about">About Us</a>
+          <a class="link link-hover" href="/contact">Contact</a>
+        </div>
+        <div>
+          <div class="grid grid-flow-col gap-4">
+            <!-- Social Icons -->
+          </div>
+        </div>
+        <div>
+          <p>Copyright © 2023 - JT Hair Care, all rights reserved.</p>
+          <p>A Website by <a href='https://totalchris.com'>Chris Yates</a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
