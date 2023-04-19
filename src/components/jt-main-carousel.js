@@ -29,7 +29,8 @@ JtMainCarouselTemplate.innerHTML = `
             }
             .childImage{
                 border-radius: 16px;
-                width: 500px;
+                min-width: 500px;
+                min-height: 150px;
                 object-fit: cover;
             }
             @media (min-width: 768px){
