@@ -14,7 +14,6 @@ JtMainCarouselTemplate.innerHTML = `
             #carouselTrack{
                 width: max-content;
                 overflow: hidden;
-                z-index: -1;
             }
             #carousel{
                 display: flex;
@@ -54,9 +53,9 @@ JtMainCarouselTemplate.innerHTML = `
                     <img src="/assets/woman1.webp" class="childImage">
                     <img src="/assets/womenscut.webp" class="childImage">
                     <img src="/assets/menscut.webp" class="childImage">
-                    <img src="/assets/tools.webp" class="childImage">
-                    <img src="/assets/woman1.webp" class="childImage">
+                    <img src="/assets/tools.webp" class="childImage">                    
                     <img src="/assets/woman2.webp" class="childImage">
+                    <img src="/assets/woman1.webp" class="childImage">
                     <img src="/assets/womenscut.webp" class="childImage">
                     <img src="/assets/menscut.webp" class="childImage">
                     <img src="/assets/tools.webp" class="childImage">
