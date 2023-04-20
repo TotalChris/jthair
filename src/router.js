@@ -27,6 +27,15 @@ const pageDescriptions = {
 
 const pageRoot = document.querySelector('#pageRoot');
 
+export const route = (e) => {
+    e.preventDefault();
+    if(e.target.href !== window.location.href){
+        window.history.pushState({}, "", e.target.href);
+        document.querySelector('jt-navbar').setActiveLink(e.target.href);
+        handleLocation();
+    }
+}
+
 const changePage = async () => {
     const route = routes[window.location.pathname] || routes[404];
     const title = pageTitles[window.location.pathname] || pageTitles[404];
@@ -34,6 +43,14 @@ const changePage = async () => {
     pageRoot.innerHTML = await fetch(route).then((data) => data.text());
     document.title = 'JT Hair | ' + title;
     document.querySelector('meta[name="description"]').setAttribute('content', description)
+    document.querySelectorAll('a.inner-navlink').forEach((el) => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.history.pushState({}, "", e.target.href);
+            document.querySelector('jt-navbar').setActiveLink(e.target.href);
+            handleLocation();
+        });
+    })
 }
 
 const handleLocation = async (force) => {
@@ -42,17 +59,13 @@ const handleLocation = async (force) => {
         pageRoot.classList.add('slide-out-bottom');
         setTimeout(async () => {
             await changePage();
+            window.scroll(0,0);
             pageRoot.classList.replace('slide-out-bottom', 'slide-in-bottom');
         }, 500)
     } else {
         await changePage();
         pageRoot.classList.add('slide-in-bottom-longer');
     }
-}
-export const route = (e) => {
-    e.preventDefault();
-    window.history.pushState({}, "", e.target.href);
-    handleLocation();
 }
 
 window.addEventListener('load', () =>  handleLocation(true) )

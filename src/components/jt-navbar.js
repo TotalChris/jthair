@@ -37,7 +37,7 @@ class JTNavbar extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: 'open'}).appendChild(JTNavbarTemplate.content.cloneNode(true))
-        let isDrawerOpen = true;
+        this.isDrawerOpen = true;
         const drawerButton = this.shadowRoot.querySelector('#drawerButton');
         const navbarRoot = this.shadowRoot.querySelector('#navbarRoot');
         const navbarWrapper = this.shadowRoot.querySelector('#navbarWrapper');
@@ -46,23 +46,13 @@ class JTNavbar extends HTMLElement {
         navbarRoot.querySelectorAll('.navlink').forEach((el) => {
             el.addEventListener('click', (e) => {
                 route(e);
-                this.shadowRoot.querySelectorAll("a.navlink").forEach((e) => {
-                    if(e.dataset.name === window.location.pathname){
-                        e.classList.remove('bg-black', 'text-white', 'hover:bg-neutral-800')
-                        e.classList.add('bg-white', 'text-black', 'hover:bg-neutral-200')
-                    } else {
-                        e.classList.remove('bg-white', 'text-black', 'hover:bg-neutral-200')
-                        e.classList.add('bg-black', 'text-white', 'hover:bg-neutral-800')
-                    }
-                    isDrawerOpen = true;
-                    this.toggleDrawer(false);
-                })
+                this.changeHighlightedLink();
             });
         })
 
         navbarRoot.addEventListener('click', (e) => {
             if(e.target === navbarRoot){
-                isDrawerOpen = true;
+                this.isDrawerOpen = true;
                 this.toggleDrawer(false);
             }
         });
@@ -72,8 +62,8 @@ class JTNavbar extends HTMLElement {
         })
 
         this.toggleDrawer = (manual) => {
-            if(manual || !isDrawerOpen){
-                isDrawerOpen = true;
+            if(manual || !this.isDrawerOpen){
+                this.isDrawerOpen = true;
                 drawerButton.classList.add('bg-white', 'text-black', 'hover:bg-neutral-200');
                 drawerButton.classList.remove('bg-black', 'text-white', 'hover:bg-neutral-800');
                 navbarWrapper.classList.add('h-96');
@@ -81,8 +71,8 @@ class JTNavbar extends HTMLElement {
                 navbarRoot.classList.remove('navbar-root-mist-closed');
                 drawerContents.classList.add('visible');
                 drawerContents.classList.remove('hidden');
-            } else if (!manual || isDrawerOpen) {
-                isDrawerOpen = false;
+            } else if (!manual || this.isDrawerOpen) {
+                this.isDrawerOpen = false;
                 drawerButton.classList.remove('bg-white', 'text-black', 'hover:bg-neutral-200');
                 drawerButton.classList.add('bg-black', 'text-white', 'hover:bg-neutral-800');
                 navbarWrapper.classList.remove('h-96');
@@ -94,12 +84,36 @@ class JTNavbar extends HTMLElement {
         }
     }
 
+    changeHighlightedLink() {
+        this.shadowRoot.querySelectorAll("a.navlink").forEach((e) => {
+            if(e.dataset.name === window.location.pathname){
+                e.classList.remove('bg-black', 'text-white', 'hover:bg-neutral-800')
+                e.classList.add('bg-white', 'text-black', 'hover:bg-neutral-200')
+            } else {
+                e.classList.remove('bg-white', 'text-black', 'hover:bg-neutral-200')
+                e.classList.add('bg-black', 'text-white', 'hover:bg-neutral-800')
+            }
+            this.isDrawerOpen = true;
+            this.toggleDrawer(false);
+        })
+    }
+
+    setActiveLink(path){
+        let linkUrl = new URL(path);
+        this.shadowRoot.querySelectorAll("a.navlink").forEach((e) => {
+            e.classList.remove('bg-white', 'text-black', 'hover:bg-neutral-200')
+            e.classList.add('bg-black', 'text-white', 'hover:bg-neutral-800')
+            if(linkUrl.pathname === e.dataset.name){
+                console.log("Matching link " + e.dataset.name + " to provided path " + linkUrl.pathname)
+                e.classList.remove('bg-black', 'text-white', 'hover:bg-neutral-800')
+                e.classList.add('bg-white', 'text-black', 'hover:bg-neutral-200')
+            }
+        })
+    }
+
     connectedCallback() {
         this.toggleDrawer();
-        this.shadowRoot.querySelectorAll("a.navlink[data-name=\"" + window.location.pathname + "\"]").forEach((e) => {
-            e.classList.remove('bg-black', 'text-white', 'hover:bg-neutral-800')
-            e.classList.add('bg-white', 'text-black', 'hover:bg-neutral-200')
-        })
+        this.setActiveLink(window.location);
     }
 }
 
