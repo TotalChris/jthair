@@ -4,7 +4,7 @@ const JTServiceListTemplate = document.createElement('template');
 JTServiceListTemplate.innerHTML = `
     <style>${stylesheet}</style>
     <div class="pb-12 pt-6 !sticky top-24 z-10" style="background-image: linear-gradient(to bottom, white 55%, transparent 100%)">
-    <div class="bg-white mx-auto max-w-max flex flex-row gap-1 items-center justify-center h-16 tabs tabs-boxed bg-transparent border-black border-4 rounded-2xl !text-black ">
+    <div class="bg-white mx-auto max-w-max flex flex-row flex-nowrap gap-1 items-center justify-center h-16 tabs tabs-boxed bg-transparent border-black border-4 rounded-2xl !text-black ">
         <div class="btn btn-ghost normal-case border-0 text-black text-lg flex flex-row grow h-full items-center gap-2 bg-jt-yellow pl-2" id="womensBtn"><img src="/assets/icons/woman.svg" alt="woman" style="max-height: 32px ">Womens</div>
         <div class="btn btn-ghost normal-case border-0 text-black text-lg flex flex-row grow h-full items-center gap-2 pl-2" id="mensBtn"><img src="/assets/icons/man.svg" alt="woman" style="max-height: 32px">Mens</div>
         <div class="btn btn-ghost normal-case border-0 text-black text-lg flex flex-row grow h-full items-center gap-2 pl-4" id="kidsBtn"><img src="/assets/icons/family.svg" alt="woman" style="max-height: 32px">Kids</div>
