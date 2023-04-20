@@ -104,7 +104,6 @@ class JTNavbar extends HTMLElement {
             e.classList.remove('bg-white', 'text-black', 'hover:bg-neutral-200')
             e.classList.add('bg-black', 'text-white', 'hover:bg-neutral-800')
             if(linkUrl.pathname === e.dataset.name){
-                console.log("Matching link " + e.dataset.name + " to provided path " + linkUrl.pathname)
                 e.classList.remove('bg-black', 'text-white', 'hover:bg-neutral-800')
                 e.classList.add('bg-white', 'text-black', 'hover:bg-neutral-200')
             }
