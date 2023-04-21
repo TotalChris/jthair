@@ -23,6 +23,7 @@ JTServiceListTemplate.innerHTML = `
           white-space: nowrap;
           word-wrap: normal;
           direction: ltr;
+          margin-right: -7.5px;
           text-rendering: optimizeLegibility;
           -webkit-font-smoothing: antialiased;
         }
