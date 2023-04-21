@@ -28,7 +28,7 @@ JTServiceListTemplate.innerHTML = `
           -webkit-font-smoothing: antialiased;
         }
     </style>
-    <div class="pb-12 pt-6 sm:!sticky top-24 z-10" style="background-image: linear-gradient(to bottom, white 55%, transparent 100%)">
+    <div class="pb-12 pt-6 !sticky top-24 z-10" style="background-image: linear-gradient(to bottom, white 55%, transparent 100%)">
     <div class="bg-white mx-auto max-w-max flex h-12 sm:h-16 flex-row flex-nowrap gap-1 items-center justify-center tabs tabs-boxed bg-transparent border-black border-4 rounded-2xl !text-black ">
         <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 bg-jt-yellow pl-2" id="womensBtn"><span class="material-icons">woman</span>Womens</div>
         <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 pl-2" id="mensBtn"><span class="material-icons">man</span>Mens</div>
