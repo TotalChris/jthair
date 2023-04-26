@@ -68,5 +68,9 @@ const handleLocation = async (force) => {
     }
 }
 
-window.addEventListener('load', () =>  handleLocation(true) )
+window.addEventListener('load', (e) =>  {
+    if(window.location.pathname !== '/'){
+        handleLocation(true)
+    }
+})
 window.addEventListener('popstate', handleLocation)
