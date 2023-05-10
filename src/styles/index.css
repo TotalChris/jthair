@@ -218,9 +218,14 @@ table{
 }
 
 td{
-  font-size: 1.2rem;
-  padding-inline: 20px;
   border-bottom: 0px;
+}
+
+td:first-child{
+  padding-right: 20px;
+}
+td:last-child{
+  padding-left: 20px;
 }
 
 tbody tr td:last-child, thead tr th:last-child{
@@ -228,11 +233,5 @@ tbody tr td:last-child, thead tr th:last-child{
 }
 
 @media (max-width: 768px){
-  .bg-fade{
-    background-image: linear-gradient(to bottom, #00000000 0, #ffffff 30%);
-    width: inherit;
-    margin-inline: -0.5rem;
-    margin-top: -12rem;
-    padding-top: 5rem;
-  }
+
 }

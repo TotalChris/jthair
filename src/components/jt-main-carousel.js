@@ -17,21 +17,20 @@ JtMainCarouselTemplate.innerHTML = `
             #carousel{
                 display: inline-flex;
                 gap: 16px;
-                min-height: 350px;
+                min-height: 300px;
                 margin-block: 16px;
                 animation: carousel 60s linear 0s infinite;
             }
             .childImage{
                 border-radius: 16px;
                 min-width: 500px;
-                min-height: 350px;
+                min-height: 300px;
                 background-position: center;
             }
             @media (min-width: 768px){
                 #carousel{
-                    max-height: 400px;
+                    max-height: 300px;
                 }
-              
             }
             @media (max-width: 1024px){
                 #carouselScaffold{
@@ -57,6 +56,7 @@ JtMainCarouselTemplate.innerHTML = `
         </div>
 `
 class JtMainCarousel extends HTMLElement {
+    
     constructor() {
         super();
         this.attachShadow({mode: 'open'}).appendChild(JtMainCarouselTemplate.content.cloneNode(true));
