@@ -11,7 +11,7 @@ JTStaffCarouselTemplate.innerHTML = `
             <img src="/assets/team/aimee.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Aimee" id="staff-1" data-staffid="1"/>
         </div>
         <div class="carousel-item">
-            <img src="/assets/team/kathy.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Kathi" id="staff-2" data-staffid="2"/>
+            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Kathi" id="staff-2" data-staffid="2"/>
         </div>
         <div class="carousel-item">
             <img src="/assets/team/stephanie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Stephanie" id="staff-3" data-staffid="3" loading="lazy" />
