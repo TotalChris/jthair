@@ -1,38 +1,32 @@
-import stylesheet from '../styles/index.css?inline'
 import {services} from "../data/services.js";
+import stylesheet from "../styles/index.css"
 const JTServiceListTemplate = document.createElement('template');
 JTServiceListTemplate.innerHTML = `
     <style>
         ${stylesheet}
-        @font-face {
-          font-family: 'Material Icons';
-          font-style: normal;
-          font-weight: 400;
-          src: url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+        .m-icon{
+            height: 24px;
+            width: 24px;
+            margin-right: -5px;
         }
-        
-        .material-icons {
-          font-family: 'Material Icons';
-          font-weight: normal;
-          font-style: normal;
-          font-size: 24px;
-          line-height: 1;
-          letter-spacing: normal;
-          text-transform: none;
-          display: inline-block;
-          white-space: nowrap;
-          word-wrap: normal;
-          direction: ltr;
-          margin-right: -7.5px;
-          text-rendering: optimizeLegibility;
-          -webkit-font-smoothing: antialiased;
+        .man{
+            background: url("/assets/icons/content/man.svg");
+            background-size: contain;
+        }
+        .woman{
+            background: url("/assets/icons/content/woman.svg");
+            background-size: contain;
+        }
+        .family{
+            background: url("/assets/icons/content/family.svg");
+            background-size: contain;
         }
     </style>
     <div class="pb-12 pt-6 !sticky top-24 z-10" style="background-image: linear-gradient(to bottom, white 55%, transparent 100%)">
     <div class="bg-white mx-auto max-w-max flex h-12 sm:h-16 flex-row flex-nowrap gap-1 items-center justify-center tabs tabs-boxed bg-transparent border-black border-4 rounded-2xl !text-black ">
-        <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 bg-jt-yellow pl-2" id="womensBtn"><span class="material-icons">woman</span>Womens</div>
-        <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 pl-2" id="mensBtn"><span class="material-icons">man</span>Mens</div>
-        <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 pl-4" id="kidsBtn"><span class="material-icons">family_restroom</span>Kids</div>
+        <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 bg-jt-yellow pl-2" id="womensBtn"><div class="m-icon woman"></div>Womens</div>
+        <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 pl-2" id="mensBtn"><div class="m-icon man"></div>Mens</div>
+        <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 pl-4" id="kidsBtn"><div class="m-icon family"></div>Kids</div>
     </div>
     </div>
     <div id="serviceCardRoot" class="flex flex-col gap-2 mx-4"><jt-service-card name="On-The-Go Cut" price="$23.00" description="Cut and Shampoo" class="w-full _"></jt-service-card><jt-service-card name="Cut &amp; Blowout" price="$36.00" description="Cut, Shampoo, and Blowout" class="w-full _"></jt-service-card><jt-service-card name="All-Over Color" price="$69.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Full Highlights" price="$85.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Partial Highlights" price="$65.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Retouch" price="$60.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Balayage" price="$120.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Ombre" price="$120.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Shampoo &amp; Style" price="$30.00" description="" class="w-full _"></jt-service-card><jt-service-card name="Shampoo &amp; Roller Set" price="$42.00" description="" class="w-full _"></jt-service-card><jt-service-card name="Conditioning Treatment &amp; Blowout" price="$35.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Olaplex Hair Perfector &amp; Repair" price="$35.00" description="" class="w-full _"></jt-service-card><jt-service-card name="Malibu Treatment" price="$25.00" description="" class="w-full _"></jt-service-card><jt-service-card name="Fancy Do (Up Do)" price="$50.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Braiding" price="$20.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Perm" price="$65.00+" description="" class="w-full _"></jt-service-card><jt-service-card name="Eyebrow Waxing" price="$15.00" description="" class="w-full _"></jt-service-card><jt-service-card name="Lip Waxing" price="$8.00" description="" class="w-full _"></jt-service-card><jt-service-card name="Chin Waxing" price="$8.00" description="" class="w-full _"></jt-service-card></div>

@@ -231,7 +231,3 @@ td:last-child{
 tbody tr td:last-child, thead tr th:last-child{
   border-left: 1px solid black;
 }
-
-@media (max-width: 768px){
-
-}

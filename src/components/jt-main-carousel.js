@@ -26,6 +26,7 @@ JtMainCarouselTemplate.innerHTML = `
                 min-width: 500px;
                 min-height: 300px;
                 background-position: center;
+                background-size: cover;
             }
             @media (min-width: 768px){
                 #carousel{
