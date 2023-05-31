@@ -1,5 +1,5 @@
 import {services} from "../data/services.js";
-import stylesheet from "../styles/index.css"
+import stylesheet from "../styles/index.css?inline"
 const JTServiceListTemplate = document.createElement('template');
 JTServiceListTemplate.innerHTML = `
     <style>
