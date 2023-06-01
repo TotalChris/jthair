@@ -1,0 +1,51 @@
+export const hours = [
+    {
+        id: "0",
+        day: "Sunday",
+        isOpen: false,
+        start: '0:00 AM',
+        end: '0:00 AM',
+    },
+    {
+        id: "1",
+        day: "Monday",
+        isOpen: false,
+        start: '0:00 AM',
+        end: '0:00 AM',
+    },
+    {
+        id: "2",
+        day: "Tuesday",
+        isOpen: true,
+        start: '9 AM',
+        end: '7 PM',
+    },
+    {
+        id: "3",
+        day: "Wednesday",
+        isOpen: true,
+        start: '9 AM',
+        end: '7 PM',
+    },
+    {
+        id: "4",
+        day: "Thursday",
+        isOpen: true,
+        start: '9 AM',
+        end: '5 PM',
+    },
+    {
+        id: "5",
+        day: "Friday",
+        isOpen: true,
+        start: '9 AM',
+        end: '4 PM',
+    },
+    {
+        id: "6",
+        day: "Saturday",
+        isOpen: true,
+        start: '9 AM',
+        end: '3 PM',
+    },
+]
