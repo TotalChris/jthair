@@ -6,26 +6,21 @@ export const staff = [
         },
         {
             id: "1",
-            firstName: "Aimee",
-            title: "Stylist",
-        },
-        {
-            id: "2",
             firstName: "Kathi",
             title: "Stylist",
         },
         {
-            id: "3",
+            id: "2",
             firstName: "Stephanie",
             title: "Stylist",
         },
         {
-            id: "4",
+            id: "3",
             firstName: "Valerie",
             title: "Stylist",
         },
         {
-            id: "5",
+            id: "4",
             firstName: "Lisa",
             title: "Stylist",
         },

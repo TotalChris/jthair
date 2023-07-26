@@ -8,19 +8,16 @@ JTStaffCarouselTemplate.innerHTML = `
             <img src="/assets/team/jody.webp" height="300px" width="300px" class="rounded-full mx-auto transition-opacity select-none" draggable="false" alt="Jody" id="staff-0" data-staffid="0" />
         </div>
         <div class="carousel-item">
-            <img src="/assets/team/aimee.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Aimee" id="staff-1" data-staffid="1"/>
+            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Kathi" id="staff-1" data-staffid="1"/>
         </div>
         <div class="carousel-item">
-            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Kathi" id="staff-2" data-staffid="2"/>
+            <img src="/assets/team/stephanie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Stephanie" id="staff-2" data-staffid="2" />
         </div>
         <div class="carousel-item">
-            <img src="/assets/team/stephanie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Stephanie" id="staff-3" data-staffid="3" loading="lazy" />
-        </div>
-        <div class="carousel-item">
-            <img src="/assets/team/valerie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Valerie" id="staff-4" data-staffid="4" loading="lazy" />
+            <img src="/assets/team/valerie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Valerie" id="staff-3" data-staffid="3" loading="lazy" />
         </div>
         <div class="carousel-item" style="padding-right: calc((100% - 300px) / 2)">
-            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Lisa" id="staff-5" data-staffid="5" loading="lazy" />
+            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Lisa" id="staff-4" data-staffid="4" loading="lazy" />
         </div>
     </div>
     <div id="staffBio" class="px-4 min-h-12 min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto m-4">
