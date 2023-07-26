@@ -119,7 +119,6 @@ class JTNavbar extends HTMLElement {
         this.toggleDrawer();
         this.setActiveLink(window.location);
         let store = hours[new Date().getDay()];
-        store = hours[1];
         this.ticker.innerHTML = `
             <div style="font-weight: 800">${(store.isOpen ? 'Open Today' : "Closed")}</div>
             <div>${ (store.isOpen ? (store.start) + ' - ' + (store.end) + (store.restricted ? ' (By Appointment)' : '') : ('Open Mon 10 - 5 (By Appointment)')) }</div>
