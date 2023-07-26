@@ -5,13 +5,15 @@ export const hours = [
         isOpen: false,
         start: '0:00 AM',
         end: '0:00 AM',
+        restricted: false,
     },
     {
         id: "1",
         day: "Monday",
-        isOpen: false,
-        start: '0:00 AM',
-        end: '0:00 AM',
+        isOpen: true,
+        start: '10 AM',
+        end: '5 PM',
+        restricted: true,
     },
     {
         id: "2",
@@ -19,6 +21,7 @@ export const hours = [
         isOpen: true,
         start: '9 AM',
         end: '7 PM',
+        restricted: false,
     },
     {
         id: "3",
@@ -26,6 +29,7 @@ export const hours = [
         isOpen: true,
         start: '9 AM',
         end: '7 PM',
+        restricted: false,
     },
     {
         id: "4",
@@ -33,6 +37,7 @@ export const hours = [
         isOpen: true,
         start: '9 AM',
         end: '5 PM',
+        restricted: false,
     },
     {
         id: "5",
@@ -40,6 +45,7 @@ export const hours = [
         isOpen: true,
         start: '9 AM',
         end: '4 PM',
+        restricted: false,
     },
     {
         id: "6",
@@ -47,5 +53,6 @@ export const hours = [
         isOpen: true,
         start: '9 AM',
         end: '3 PM',
+        restricted: false,
     },
 ]
