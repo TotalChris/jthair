@@ -6,7 +6,7 @@ JTServiceCardTemplate.innerHTML = `
         <div class="bg-accent-content gap-2 jt-price-card bg-cover">
             <div class='w-full h-full jt-price-card stat'>
                 <div class="stat-title text-white" id="serviceName"></div>
-                <div class="stat-value jt-yellow" id="servicePrice"></div>
+                <div class="stat-value bg-jt-grad-text" id="servicePrice"></div>
                 <div class="stat-desc text-neutral-300" id="serviceDescription"></div>
             </div>
         </div>

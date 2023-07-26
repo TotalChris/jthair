@@ -1,10 +1,11 @@
 import {route} from "../router.js";
+import {hours} from "../data/hours.js";
 import stylesheet from '../styles/index.css?inline'
 const JTNavbarTemplate = document.createElement('template');
 JTNavbarTemplate.innerHTML = `
     <style>${stylesheet}</style>
     <div id="navbarRoot" class="fixed right-0 left-0 top-0 z-20">
-        <div id="navbarWrapper" class="min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto m-4 bg-black drop-shadow-2xl rounded-2xl h-20 md:!h-20 transition-all">
+        <div id="navbarWrapper" class="min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 mt-4 bg-black drop-shadow-2xl rounded-t-box h-20 md:!h-20 transition-all">
             <div class='flex flex-row justify-between items-center w-full gap-4 px-2 h-20'>
                 <button id="drawerButton" class="btn btn-ghost text-2xl font-bold md:hidden h-14" aria-label="navigate">
                     <i class="bi bi-list"></i>
@@ -31,6 +32,9 @@ JTNavbarTemplate.innerHTML = `
                 <a href="./contact" data-name="/contact" class="navlink btn bg-transparent border-0 text-white hover:bg-neutral-800 font-bold font-inter normal-case">Contact</a>
             </div>
         </div>
+        <div id="ticker" class="min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 bg-jt-grad text-black drop-shadow-2xl rounded-b-box h-8 flex flex-row items-center justify-center gap-2">
+            
+        </div>
     </div>
 `
 class JTNavbar extends HTMLElement {
@@ -42,6 +46,7 @@ class JTNavbar extends HTMLElement {
         const navbarRoot = this.shadowRoot.querySelector('#navbarRoot');
         const navbarWrapper = this.shadowRoot.querySelector('#navbarWrapper');
         const drawerContents = this.shadowRoot.querySelector('#drawerContents');
+        this.ticker = this.shadowRoot.querySelector('#ticker');
 
         navbarRoot.querySelectorAll('.navlink').forEach((el) => {
             el.addEventListener('click', (e) => {
@@ -113,6 +118,13 @@ class JTNavbar extends HTMLElement {
     connectedCallback() {
         this.toggleDrawer();
         this.setActiveLink(window.location);
+        let store = hours[new Date().getDay()];
+        store = hours[1];
+        this.ticker.innerHTML = `
+            <div style="font-weight: 800">${(store.isOpen ? 'Open Today' : "Closed")}</div>
+            <div>${ (store.isOpen ? (store.start) + ' - ' + (store.end) + (store.restricted ? ' (By Appointment)' : '') : ('Open Mon 10 - 5 (By Appointment)')) }</div>
+            
+        `
     }
 }
 

@@ -22,9 +22,9 @@ JTServiceListTemplate.innerHTML = `
             background-size: contain;
         }
     </style>
-    <div class="pb-12 pt-6 !sticky top-24 z-10" style="background-image: linear-gradient(to bottom, white 55%, transparent 100%)">
+    <div class="pb-16 pt-6 !sticky top-32 z-10" style="background-image: linear-gradient(to bottom, white 55%, transparent 100%)">
     <div class="bg-white mx-auto max-w-max flex h-12 sm:h-16 flex-row flex-nowrap gap-1 items-center justify-center tabs tabs-boxed bg-transparent border-black border-4 rounded-2xl !text-black ">
-        <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 bg-jt-yellow pl-2" id="womensBtn"><div class="m-icon woman"></div>Womens</div>
+        <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 bg-jt-grad pl-2" id="womensBtn"><div class="m-icon woman"></div>Womens</div>
         <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 pl-2" id="mensBtn"><div class="m-icon man"></div>Mens</div>
         <div class="btn btn-ghost normal-case border-0 text-black text-md sm:text-lg flex flex-row grow !min-h-8 h-8 sm:h-full items-center gap-2 pl-4" id="kidsBtn"><div class="m-icon family"></div>Kids</div>
     </div>
@@ -52,20 +52,20 @@ class JtServiceList extends HTMLElement {
             return;
         }
         this.category = category;
-        this.womensButton.classList.remove('bg-jt-yellow');
-        this.mensButton.classList.remove('bg-jt-yellow');
-        this.kidsButton.classList.remove('bg-jt-yellow');
+        this.womensButton.classList.remove('bg-jt-grad');
+        this.mensButton.classList.remove('bg-jt-grad');
+        this.kidsButton.classList.remove('bg-jt-grad');
         switch (category){
             case 0:{
-                this.womensButton.classList.add('bg-jt-yellow');
+                this.womensButton.classList.add('bg-jt-grad');
                 break;
             }
             case 1:{
-                this.mensButton.classList.add('bg-jt-yellow');
+                this.mensButton.classList.add('bg-jt-grad');
                 break;
             }
             case 2:{
-                this.kidsButton.classList.add('bg-jt-yellow');
+                this.kidsButton.classList.add('bg-jt-grad');
                 break;
             }
         }
