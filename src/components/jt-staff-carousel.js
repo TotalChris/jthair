@@ -26,7 +26,7 @@ JTStaffCarouselTemplate.innerHTML = `
     <div id="staffBio" class="px-4 min-h-12 min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto m-4">
         <div class='pt-4 !pb-12'>
             <h1 class='font-bold text-center text-5xl lg:text-7xl text-black my-2'>Jody</h1>
-            <h2 class="text-center text-xl font-medium italic text-gray-500">Founder</h2>
+            <h2 class="text-center text-xl font-medium italic text-gray-500">Stylist</h2>
         </div>
     </div>
 `
