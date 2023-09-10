@@ -8,7 +8,7 @@ JTStaffCarouselTemplate.innerHTML = `
             <img src="/assets/team/jody.webp" height="300px" width="300px" class="rounded-full mx-auto transition-opacity select-none" draggable="false" alt="Jody" id="staff-0" data-staffid="0" />
         </div>
         <div class="carousel-item">
-            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Kathi" id="staff-1" data-staffid="1"/>
+            <img src="/assets/team/kathi.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Kathi" id="staff-1" data-staffid="1"/>
         </div>
         <div class="carousel-item">
             <img src="/assets/team/stephanie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Stephanie" id="staff-2" data-staffid="2" />
@@ -16,14 +16,17 @@ JTStaffCarouselTemplate.innerHTML = `
         <div class="carousel-item">
             <img src="/assets/team/valerie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Valerie" id="staff-3" data-staffid="3" loading="lazy" />
         </div>
-        <div class="carousel-item" style="padding-right: calc((100% - 300px) / 2)">
+        <div class="carousel-item">
             <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Lisa" id="staff-4" data-staffid="4" loading="lazy" />
+        </div>
+        <div class="carousel-item" style="padding-right: calc((100% - 300px) / 2)">
+            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Ariel" id="staff-5" data-staffid="5" loading="lazy" />
         </div>
     </div>
     <div id="staffBio" class="px-4 min-h-12 min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto m-4">
         <div class='pt-4 !pb-12'>
             <h1 class='font-bold text-center text-5xl lg:text-7xl text-black my-2'>Jody</h1>
-            <h2 class="text-center text-xl font-medium italic text-gray-500">Founder</h2>
+            <h2 class="text-center text-xl font-medium italic text-gray-500">Stylist</h2>
         </div>
     </div>
 `
