@@ -21,12 +21,12 @@ export const staff = [
         },
         {
             id: "4",
-            firstName: "Lisa",
+            firstName: "Ariel",
             title: "Stylist",
         },
         {
             id: "5",
-            firstName: "Ariel",
+            firstName: "Lisa",
             title: "Stylist",
         },
 ]

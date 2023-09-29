@@ -17,10 +17,10 @@ JTStaffCarouselTemplate.innerHTML = `
             <img src="/assets/team/valerie.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Valerie" id="staff-3" data-staffid="3" loading="lazy" />
         </div>
         <div class="carousel-item">
-            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Lisa" id="staff-4" data-staffid="4" loading="lazy" />
+            <img src="/assets/team/ariel.webp" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Ariel" id="staff-4" data-staffid="4" loading="lazy" />
         </div>
         <div class="carousel-item" style="padding-right: calc((100% - 300px) / 2)">
-            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Ariel" id="staff-5" data-staffid="5" loading="lazy" />
+            <img src="/assets/team/lisa.png" height="300px" width="300px" class="rounded-full mx-auto opacity-40 transition-opacity select-none" draggable="false" alt="Lisa" id="staff-5" data-staffid="5" loading="lazy" />
         </div>
     </div>
     <div id="staffBio" class="px-4 min-h-12 min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto m-4">
