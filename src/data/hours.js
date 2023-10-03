@@ -10,10 +10,10 @@ export const hours = [
     {
         id: "1",
         day: "Monday",
-        isOpen: true,
-        start: '10 AM',
-        end: '5 PM',
-        restricted: true,
+        isOpen: false,
+        start: '0:00 AM',
+        end: '0:00 PM',
+        restricted: false,
     },
     {
         id: "2",

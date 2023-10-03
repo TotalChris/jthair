@@ -118,10 +118,10 @@ class JTNavbar extends HTMLElement {
     connectedCallback() {
         this.toggleDrawer();
         this.setActiveLink(window.location);
-        let store = hours[new Date().getDay()];
+        let store = hours[new Date().getDay()]; //hours[new Date().getDay()]
         this.ticker.innerHTML = `
             <div style="font-weight: 800">${(store.isOpen ? 'Open Today' : "Closed")}</div>
-            <div>${ (store.isOpen ? (store.start) + ' - ' + (store.end) + (store.restricted ? ' (By Appointment)' : '') : ('Open Mon 10 - 5 (By Appointment)')) }</div>
+            <div>${ (store.isOpen ? (store.start) + ' - ' + (store.end) + (store.restricted ? ' (By Appointment)' : '') : ('Open Tuesday 9 AM - 7 PM')) }</div>
             
         `
     }
