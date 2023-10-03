@@ -1,32 +1,32 @@
 export const staff = [
         {
-            id: "0",
             firstName: "Jody",
             title: "Stylist",
+            image: "/assets/team/jody.webp",
         },
         {
-            id: "1",
             firstName: "Kathi",
             title: "Stylist",
+            image: "/assets/team/kathi.webp",
         },
         {
-            id: "2",
             firstName: "Stephanie",
             title: "Stylist",
+            image: "/assets/team/stephanie.webp",
         },
         {
-            id: "3",
             firstName: "Valerie",
             title: "Stylist",
+            image: "/assets/team/valerie.webp",
         },
         {
-            id: "4",
             firstName: "Ariel",
             title: "Stylist",
+            image: "/assets/team/ariel.webp",
         },
         {
-            id: "5",
             firstName: "Lisa",
             title: "Stylist",
-        },
+            image: "/assets/team/lisa.png",
+        }
 ]
