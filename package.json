@@ -10,12 +10,14 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.22",
+    "postcss": "^8.4.31",
     "tailwindcss": "^3.3.1",
     "vite": "^4.2.3"
   },
   "dependencies": {
     "daisyui": "^2.51.5",
-    "puppeteer": "^20.1.2"
+    "dotenv": "^16.3.1",
+    "puppeteer": "^20.1.2",
+    "web-vitals": "^3.5.0"
   }
 }

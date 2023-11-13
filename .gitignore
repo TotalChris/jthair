@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 /.unlighthouse/
 .fleet
+
+.env

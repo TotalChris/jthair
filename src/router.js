@@ -1,3 +1,5 @@
+import {webVitals} from "./vitals.js";
+
 const routes = {
     '/': '/pages/home.html',
     '/services': '/pages/services.html',
@@ -69,6 +71,10 @@ const handleLocation = async (force) => {
 }
 
 window.addEventListener('load', (e) =>  {
+    webVitals({
+        path: window.location.pathname,
+        analyticsId: import.meta.env.VITE_VERCEL_ANALYTICS_ID,
+    })
     handleLocation(true)
 })
 window.addEventListener('popstate', handleLocation)
