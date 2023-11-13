@@ -32,10 +32,6 @@ const pageRoot = document.querySelector('#pageRoot');
 export const route = (e) => {
     e.preventDefault();
     if(e.target.href !== window.location.href){
-        webVitals({
-            path: window.location.pathname,
-            analyticsId: import.meta.env.VITE_VERCEL_ANALYTICS_ID,
-        })
         window.history.pushState({}, "", e.target.href);
         document.querySelector('jt-navbar').setActiveLink(e.target.href);
         handleLocation();
