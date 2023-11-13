@@ -1,9 +1,12 @@
-import { hours } from "../data/hours.js";
+import {retrieveHours} from "../data/hours.js";
 import stylesheet from "../styles/index.css?inline";
 const JTHoursTableTemplate = document.createElement("template");
 JTHoursTableTemplate.innerHTML = `
     <style>
         ${stylesheet}
+        .openHour{
+        	min-width: 130px;
+        }
     </style>
     <table class="md:text-lg text-md">
         <thead>
@@ -53,7 +56,8 @@ class JTHoursTable extends HTMLElement {
 		);
 	}
 
-	connectedCallback() {
+	async connectedCallback() {
+		const hours = await retrieveHours();
 		this.shadowRoot.querySelectorAll(".openHour").forEach((entry, key) => {
 			let day = hours[key];
 			entry.innerHTML = day.isOpen ? day.start + " - " + day.end : "Closed";

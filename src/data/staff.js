@@ -1,12 +1,16 @@
 import {db} from "./init.js"
 import { collection, getDocs } from "firebase/firestore";
 
-let staff = [];
+async function retrieveStaff() {
+	let staff = [];
 
-const staffSnapshot = await getDocs(collection(db, "staff"));
+	const staffSnapshot = await getDocs(collection(db, "staff"));
 
-staffSnapshot.forEach((doc) => {
-	staff[doc.id] = doc.data()
-});
+	staffSnapshot.forEach((doc) => {
+		staff[doc.id] = doc.data()
+	});
 
-export { staff }
+	return staff
+}
+
+export { retrieveStaff }

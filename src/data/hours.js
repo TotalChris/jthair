@@ -1,12 +1,16 @@
 import {db} from "./init.js"
 import { collection, getDocs } from "firebase/firestore";
 
-let hours = [];
+async function retrieveHours(){
+	let hours = [];
 
-const hoursSnapshot = await getDocs(collection(db, "hours"));
+	const hoursSnapshot = await getDocs(collection(db, "hours"));
 
-hoursSnapshot.forEach((doc) => {
-	hours[doc.id] = doc.data()
-});
+	hoursSnapshot.forEach((doc) => {
+		hours[doc.id] = doc.data()
+	});
 
-export { hours }
+	return hours
+}
+
+export { retrieveHours }

@@ -1,5 +1,5 @@
 import stylesheet from "../styles/index.css?inline";
-import { staff } from "../data/staff";
+import { retrieveStaff } from "../data/staff";
 const JTStaffMemberTemplate = document.createElement("template");
 JTStaffMemberTemplate.innerHTML = `
         <div class="carousel-item" id="">
@@ -72,7 +72,8 @@ class JTStaffCarousel extends HTMLElement {
 		});
 	}
 
-	connectedCallback() {
+	async connectedCallback() {
+		const staff = await retrieveStaff();
 		staff.forEach((member, idx, arr) => {
 			let el = JTStaffMemberTemplate.content.cloneNode(true);
 			el.querySelector("img").src = member.image;
