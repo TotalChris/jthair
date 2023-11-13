@@ -15,10 +15,7 @@ function getConnectionSpeed() {
  * @param {{ params: { [s: string]: any; } | ArrayLike<any>; path: string; analyticsId: string; debug: boolean; }} options
  */
 function sendToAnalytics(metric, options) {
-    const page = Object.entries(options.params).reduce(
-        (acc, [key, value]) => acc.replace(value, `[${key}]`),
-        options.path,
-    );
+    const page = options.path
 
     const body = {
         dsn: options.analyticsId,
@@ -29,6 +26,8 @@ function sendToAnalytics(metric, options) {
         value: metric.value.toString(), // 60.20000000298023
         speed: getConnectionSpeed(), // 4g
     };
+
+    console.log(body)
 
     if (options.debug) {
         console.log('[Analytics]', metric.name, JSON.stringify(body, null, 2));

@@ -74,9 +74,7 @@ window.addEventListener('load', (e) =>  {
     handleLocation(true)
     webVitals({
         path: window.location.pathname,
-        params: window.location.pathname,
         analyticsId: import.meta.env.VERCEL_ANALYTICS_ID,
-
     })
 })
 window.addEventListener('popstate', handleLocation)
