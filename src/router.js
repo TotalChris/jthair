@@ -35,6 +35,10 @@ export const route = (e) => {
         window.history.pushState({}, "", e.target.href);
         document.querySelector('jt-navbar').setActiveLink(e.target.href);
         handleLocation();
+        webVitals({
+            path: window.location.pathname,
+            analyticsId: import.meta.env.VITE_VERCEL_ANALYTICS_ID,
+        })
     }
 }
 
@@ -72,9 +76,5 @@ const handleLocation = async (force) => {
 
 window.addEventListener('load', (e) =>  {
     handleLocation(true)
-    webVitals({
-        path: window.location.pathname,
-        analyticsId: import.meta.env.VITE_VERCEL_ANALYTICS_ID,
-    })
 })
 window.addEventListener('popstate', handleLocation)
