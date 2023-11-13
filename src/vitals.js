@@ -27,8 +27,6 @@ function sendToAnalytics(metric, options) {
         speed: getConnectionSpeed(), // 4g
     };
 
-    console.log(body)
-
     if (options.debug) {
         console.log('[Analytics]', metric.name, JSON.stringify(body, null, 2));
     }
