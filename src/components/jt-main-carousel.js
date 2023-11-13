@@ -1,4 +1,4 @@
-const JtMainCarouselTemplate = document.createElement('template');
+const JtMainCarouselTemplate = document.createElement("template");
 JtMainCarouselTemplate.innerHTML = `
         <style>
             @keyframes carousel {
@@ -51,13 +51,14 @@ JtMainCarouselTemplate.innerHTML = `
                 <div style=" background-image: url('/assets/tools.webp'); " class="childImage"></div>
             </div>
         </div>
-`
+`;
 class JtMainCarousel extends HTMLElement {
-    
-    constructor() {
-        super();
-        this.attachShadow({mode: 'open'}).appendChild(JtMainCarouselTemplate.content.cloneNode(true));
-    }
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" }).appendChild(
+			JtMainCarouselTemplate.content.cloneNode(true)
+		);
+	}
 }
 
-window.customElements.define('jt-main-carousel', JtMainCarousel);
+window.customElements.define("jt-main-carousel", JtMainCarousel);

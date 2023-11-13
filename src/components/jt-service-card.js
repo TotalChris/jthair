@@ -1,5 +1,5 @@
-import stylesheet from '../styles/index.css?inline'
-const JTServiceCardTemplate = document.createElement('template');
+import stylesheet from "../styles/index.css?inline";
+const JTServiceCardTemplate = document.createElement("template");
 JTServiceCardTemplate.innerHTML = `
 <style>${stylesheet}</style>
     <div class="stats shadow" id="cardRoot">
@@ -11,27 +11,28 @@ JTServiceCardTemplate.innerHTML = `
             </div>
         </div>
     </div>
-`
+`;
 
 class JtServiceCard extends HTMLElement {
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" }).appendChild(
+			JTServiceCardTemplate.content.cloneNode(true)
+		);
+		this.cardRoot = this.shadowRoot.querySelector("#cardRoot");
+		this.cardName = this.shadowRoot.querySelector("#serviceName");
+		this.cardPrice = this.shadowRoot.querySelector("#servicePrice");
+		this.cardDescription = this.shadowRoot.querySelector("#serviceDescription");
+	}
 
-    constructor() {
-        super();
-        this.attachShadow({mode: "open"}).appendChild(JTServiceCardTemplate.content.cloneNode(true));
-        this.cardRoot = this.shadowRoot.querySelector('#cardRoot')
-        this.cardName = this.shadowRoot.querySelector('#serviceName');
-        this.cardPrice = this.shadowRoot.querySelector('#servicePrice');
-        this.cardDescription = this.shadowRoot.querySelector('#serviceDescription');
-    }
-
-    connectedCallback(){
-        this.cardName.innerHTML = this.getAttribute('name');
-        this.cardPrice.innerHTML = this.getAttribute('price');
-        this.cardDescription.innerHTML = this.getAttribute('description');
-        this.classList.forEach((c) => {
-            this.cardRoot.classList.add(c);
-        })
-    }
+	connectedCallback() {
+		this.cardName.innerHTML = this.getAttribute("name");
+		this.cardPrice.innerHTML = this.getAttribute("price");
+		this.cardDescription.innerHTML = this.getAttribute("description");
+		this.classList.forEach((c) => {
+			this.cardRoot.classList.add(c);
+		});
+	}
 }
 
-window.customElements.define('jt-service-card', JtServiceCard);
+window.customElements.define("jt-service-card", JtServiceCard);

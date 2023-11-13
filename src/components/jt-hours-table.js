@@ -1,6 +1,6 @@
-import {hours} from "../data/hours.js";
-import stylesheet from "../styles/index.css?inline"
-const JTHoursTableTemplate = document.createElement('template')
+import { hours } from "../data/hours.js";
+import stylesheet from "../styles/index.css?inline";
+const JTHoursTableTemplate = document.createElement("template");
 JTHoursTableTemplate.innerHTML = `
     <style>
         ${stylesheet}
@@ -43,21 +43,22 @@ JTHoursTableTemplate.innerHTML = `
             </tr>
         </tbody>
     </table>
-`
+`;
 
 class JTHoursTable extends HTMLElement {
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" }).appendChild(
+			JTHoursTableTemplate.content.cloneNode(true)
+		);
+	}
 
-    constructor() {
-        super();
-        this.attachShadow({mode: 'open'}).appendChild(JTHoursTableTemplate.content.cloneNode(true));
-    }
-
-    connectedCallback(){
-        this.shadowRoot.querySelectorAll('.openHour').forEach((entry, key) => {
-            let day = hours[key];
-            entry.innerHTML = (day.isOpen ? day.start + ' - ' + day.end : 'Closed')
-        })
-    }
+	connectedCallback() {
+		this.shadowRoot.querySelectorAll(".openHour").forEach((entry, key) => {
+			let day = hours[key];
+			entry.innerHTML = day.isOpen ? day.start + " - " + day.end : "Closed";
+		});
+	}
 }
 
-window.customElements.define('jt-hours-table', JTHoursTable);
+window.customElements.define("jt-hours-table", JTHoursTable);

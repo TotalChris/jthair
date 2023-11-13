@@ -1,58 +1,12 @@
-export const hours = [
-    {
-        id: "0",
-        day: "Sunday",
-        isOpen: false,
-        start: '0:00 AM',
-        end: '0:00 AM',
-        restricted: false,
-    },
-    {
-        id: "1",
-        day: "Monday",
-        isOpen: false,
-        start: '0:00 AM',
-        end: '0:00 PM',
-        restricted: false,
-    },
-    {
-        id: "2",
-        day: "Tuesday",
-        isOpen: true,
-        start: '9 AM',
-        end: '7 PM',
-        restricted: false,
-    },
-    {
-        id: "3",
-        day: "Wednesday",
-        isOpen: true,
-        start: '9 AM',
-        end: '7 PM',
-        restricted: false,
-    },
-    {
-        id: "4",
-        day: "Thursday",
-        isOpen: true,
-        start: '9 AM',
-        end: '5 PM',
-        restricted: false,
-    },
-    {
-        id: "5",
-        day: "Friday",
-        isOpen: true,
-        start: '9 AM',
-        end: '4 PM',
-        restricted: false,
-    },
-    {
-        id: "6",
-        day: "Saturday",
-        isOpen: true,
-        start: '9 AM',
-        end: '3 PM',
-        restricted: false,
-    },
-]
+import {db} from "./init.js"
+import { collection, getDocs } from "firebase/firestore";
+
+let hours = [];
+
+const hoursSnapshot = await getDocs(collection(db, "hours"));
+
+hoursSnapshot.forEach((doc) => {
+	hours[doc.id] = doc.data()
+});
+
+export { hours }

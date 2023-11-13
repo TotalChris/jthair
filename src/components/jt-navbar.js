@@ -1,6 +1,9 @@
 import {route} from "../router.js";
 import {hours} from "../data/hours.js";
 import stylesheet from '../styles/index.css?inline'
+
+
+
 const JTNavbarTemplate = document.createElement('template');
 JTNavbarTemplate.innerHTML = `
     <style>${stylesheet}</style>
