@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "daisyui": "^2.51.5",
-    "puppeteer": "^20.1.2"
+    "puppeteer": "^20.1.2",
+    "web-vitals": "^3.5.0"
   }
 }
