@@ -43,7 +43,7 @@ function sendToAnalytics(metric, options) {
         fetch(vitalsUrl, {
             body: blob,
             method: 'POST',
-            credentials: 'Bearer ' + import.meta.env.BEARER_TOKEN,
+            credentials: 'omit',
             keepalive: true,
         });
 }
