@@ -1,8 +1,24 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/services",
       "destination": "/"
+    },
+    {
+      "source": "/our-team",
+      "destination": "/"
+    },
+    {
+      "source": "/about",
+      "destination": "/"
+    },
+    {
+      "source": "/contact",
+      "destination": "/"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/404.js"
     }
   ]
 }
