@@ -1,24 +1,10 @@
 {
-  "rewrites": [
-    {
-      "source": "/services",
-      "destination": "/"
-    },
-    {
-      "source": "/our-team",
-      "destination": "/"
-    },
-    {
-      "source": "/about",
-      "destination": "/"
-    },
-    {
-      "source": "/contact",
-      "destination": "/"
-    }
-  ],
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/services", "status": 200, "dest": "/" },
+    { "src": "/our-team", "status": 200, "dest": "/" },
+    { "src": "/about", "status": 200, "dest": "/" },
+    { "src": "/contact", "status": 200, "dest": "/" },
     { "src": "/(.*)", "status": 404, "dest": "/404" }
   ]
 }
