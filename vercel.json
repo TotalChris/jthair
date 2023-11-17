@@ -1,19 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/services",
-      "destination": "/"
-    },
-    {
-      "source": "/our-team",
-      "destination": "/"
-    },
-    {
-      "source": "/about",
-      "destination": "/"
-    },
-    {
-      "source": "/contact",
+      "source": "/(.*)",
       "destination": "/"
     }
   ]
