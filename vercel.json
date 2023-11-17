@@ -20,7 +20,7 @@
   "redirects": [
     {
       "source": "/404",
-      "destination": "/",
+      "destination": "/404",
       "statusCode": 404
     }
   ]

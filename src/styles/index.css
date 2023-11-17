@@ -50,6 +50,12 @@
 .bi-list::before {
 	content: "\f479";
 }
+.bi-exclamation-triangle::before {
+	content: "\F33B";
+}
+.bi-house::before {
+	content: "\F425"
+}
 
 :root {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

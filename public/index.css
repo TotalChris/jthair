@@ -47,6 +47,12 @@
 .bi-geo-alt::before {
   content: "\f3e8";
 }
+.bi-exclamation-triangle::before {
+  content: "\f33b";
+}
+.bi-house::before {
+  content: "\F425"
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
