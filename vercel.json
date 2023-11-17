@@ -1,8 +1,27 @@
 {
   "rewrites": [
     {
-      "source": "/:url",
+      "source": "/services",
       "destination": "/"
+    },
+    {
+      "source": "/our-team",
+      "destination": "/"
+    },
+    {
+      "source": "/about",
+      "destination": "/"
+    },
+    {
+      "source": "/contact",
+      "destination": "/"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/404",
+      "destination": "/",
+      "statusCode": 404
     }
   ]
 }
