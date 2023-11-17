@@ -39,11 +39,16 @@ export const route = (e) => {
 }
 
 const changePage = async () => {
-    const route = routes[window.location.pathname] || routes[404];
+    const route = routes[window.location.pathname] || window.location.pathname + '.html';
     const title = pageTitles[window.location.pathname] || pageTitles[404];
     const description = pageDescriptions[window.location.pathname] || pageDescriptions[404];
-    pageRoot.innerHTML = await fetch(route).then((data) => data.text());
-    document.title = 'JT Hair Care of Brighton | ' + title;
+    pageRoot.innerHTML = await fetch(route).then(async (data) => {
+        if(!data.ok){
+            return await fetch(routes[404]).then((data) => data.text());
+        } else {
+            return data.text();
+        }
+    });    document.title = 'JT Hair Care of Brighton | ' + title;
     document.querySelector('meta[name="description"]').setAttribute('content', description)
     document.querySelectorAll('a.inner-navlink').forEach((el) => {
         el.addEventListener('click', (e) => {
