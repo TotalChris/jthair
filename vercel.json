@@ -15,10 +15,6 @@
     {
       "source": "/contact",
       "destination": "/"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/api/404.js"
     }
   ]
 }
