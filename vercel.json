@@ -16,12 +16,5 @@
       "source": "/contact",
       "destination": "/"
     }
-  ],
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "/404.html",
-      "statusCode": 404
-    }
   ]
 }
