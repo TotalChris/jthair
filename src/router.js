@@ -39,7 +39,7 @@ export const route = (e) => {
 }
 
 const changePage = async () => {
-    const route = routes[window.location.pathname] || window.location.pathname + ".html";
+    const route = routes[window.location.pathname] || "/pages" + window.location.pathname + ".html";
     const title = pageTitles[window.location.pathname] || pageTitles[404];
     const description = pageDescriptions[window.location.pathname] || pageDescriptions[404];
     pageRoot.innerHTML = await fetch(route).then(async (data) => {
