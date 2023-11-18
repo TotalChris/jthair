@@ -1,5 +1,5 @@
 import {route} from "../router.js";
-import { retrieveHours } from "../data/hours.js";
+import {hours} from "../data/hours.js";
 import stylesheet from '../styles/index.css?inline'
 
 
@@ -118,14 +118,13 @@ class JTNavbar extends HTMLElement {
         })
     }
 
-    async connectedCallback() {
+    connectedCallback() {
         this.toggleDrawer();
         this.setActiveLink(window.location);
-        let hours = await retrieveHours();
         let store = hours[new Date().getDay()]; //hours[new Date().getDay()]
         this.ticker.innerHTML = `
             <div style="font-weight: 800">${(store.isOpen ? 'Open Today' : "Closed")}</div>
-            <div>${(store.isOpen ? (store.start) + ' - ' + (store.end) + (store.restricted ? ' (By Appointment)' : '') : ('Open Tuesday 9 AM - 7 PM'))}</div>
+            <div>${ (store.isOpen ? (store.start) + ' - ' + (store.end) + (store.restricted ? ' (By Appointment)' : '') : ('Open Tuesday 9 AM - 7 PM')) }</div>
             
         `
     }
