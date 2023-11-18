@@ -18,7 +18,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/404",
+      "destination": "/",
       "statusCode": 404
     }
   ]
