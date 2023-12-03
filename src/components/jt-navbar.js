@@ -1,8 +1,7 @@
 import {route} from "../router.js";
 import {hours} from "../data/hours.js";
 import stylesheet from '../styles/index.css?inline'
-
-
+import './jt-smart-call-navbar-button.js'
 
 const JTNavbarTemplate = document.createElement('template');
 JTNavbarTemplate.innerHTML = `
@@ -16,9 +15,7 @@ JTNavbarTemplate.innerHTML = `
                 <a href="/" class="flex flex-row h-full items-center">
                     <img src="/assets/logo.webp" alt="logo" class='h-12 md:ml-2 w-auto'/>
                 </a>
-                <a class="btn btn-ghost text-white text-2xl font-bold md:hidden h-14 hover:bg-neutral-800" href='tel:8105225028' aria-label="call">
-                    <i class="bi bi-telephone"></i>
-                </a>
+                <jt-smart-call-navbar-button></jt-smart-call-navbar-button>
                 <div class="flex flex-row md:flex-col ml-0 hidden md:block gap-4 w-full md:w-auto h-auto justify-center !text-2xl md:ml-auto md:my-auto px-2">
                     <a href="/" data-name="/" class="navlink btn btn-ghost bg-black text-white hover:bg-neutral-800 font-bold font-inter normal-case">Home</a>
                     <a href="./services" data-name="/services" class="navlink btn btn-ghost bg-black text-white hover:bg-neutral-800 font-bold font-inter normal-case">Services & Pricing</a>

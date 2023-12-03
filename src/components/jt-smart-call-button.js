@@ -17,9 +17,9 @@ class JtSmartCallButton extends HTMLElement {
         const shadowRoot = this.attachShadow({mode: "open"})
         shadowRoot.appendChild(JTSmartCallButtonTemplate.content.cloneNode(true));
         this.shadowRoot.querySelector('#buttonRoot').addEventListener('click', (e) => {
-            if(!isMobile()){
-                e.preventDefault();
-                route(e);
+            if(!isMobile()) {
+                e.preventDefault()
+                route({ target: {href: this.shadowRoot.querySelector('#buttonRoot').href}, preventDefault: () => {} });
             }
         })
     }
