@@ -23,10 +23,6 @@ class JtSmartCallButton extends HTMLElement {
             }
         })
     }
-
-    connectedCallback(){
-
-    }
 }
 
 window.customElements.define('jt-smart-call-button', JtSmartCallButton)

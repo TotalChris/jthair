@@ -23,10 +23,6 @@ class JtSmartCallNavbarButton extends HTMLElement {
             }
         })
     }
-
-    connectedCallback(){
-
-    }
 }
 
 window.customElements.define('jt-smart-call-navbar-button', JtSmartCallNavbarButton)
