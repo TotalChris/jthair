@@ -83,3 +83,5 @@ window.addEventListener('load', (e) =>  {
     handleLocation(true)
 })
 window.addEventListener('popstate', handleLocation)
+
+window.route = route;
