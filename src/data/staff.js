@@ -20,11 +20,6 @@ export const staff = [
             image: "/assets/team/valerie.webp",
         },
         {
-            firstName: "Ariel",
-            title: "Stylist",
-            image: "/assets/team/ariel.webp",
-        },
-        {
             firstName: "Lisa",
             title: "Stylist",
             image: "/assets/team/lisa.png",
