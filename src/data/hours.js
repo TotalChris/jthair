@@ -2,7 +2,7 @@ export const hours = [
     {
         id: "0",
         day: "Sunday",
-        isOpen: true,
+        isOpen: false,
         start: '10 AM',
         end: '5 PM',
         restricted: false,
@@ -10,7 +10,7 @@ export const hours = [
     {
         id: "1",
         day: "Monday",
-        isOpen: true,
+        isOpen: false,
         start: '10 AM',
         end: '5 PM',
         restricted: false,
