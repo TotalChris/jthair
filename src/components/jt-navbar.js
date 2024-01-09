@@ -16,7 +16,7 @@ JTNavbarTemplate.innerHTML = `
                     <img src="/assets/logo.webp" alt="logo" class='h-12 md:ml-2 w-auto'/>
                 </a>
                 <jt-smart-call-navbar-button></jt-smart-call-navbar-button>
-                <div class="flex flex-row md:flex-col ml-0 hidden md:block gap-4 w-full md:w-auto h-auto justify-center !text-2xl md:ml-auto md:my-auto px-2">
+                <div class="hidden md:block ml-0 gap-4 w-full md:w-auto h-auto !text-2xl md:ml-auto md:my-auto px-2">
                     <a href="/" data-name="/" class="navlink btn btn-ghost bg-black text-white hover:bg-neutral-800 font-bold font-inter normal-case">Home</a>
                     <a href="./services" data-name="/services" class="navlink btn btn-ghost bg-black text-white hover:bg-neutral-800 font-bold font-inter normal-case">Services & Pricing</a>
                     <a href="./our-team" data-name="/our-team" class="navlink btn btn-ghost bg-black text-white hover:bg-neutral-800 font-bold font-inter normal-case">Our Team</a>
@@ -33,7 +33,7 @@ JTNavbarTemplate.innerHTML = `
             </div>
         </div>
         <div id="ticker" class="min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 bg-jt-grad text-black drop-shadow-2xl rounded-b-box h-8 flex flex-row items-center justify-center gap-2">
-            
+                
         </div>
     </div>
 `
@@ -114,6 +114,7 @@ class JTNavbar extends HTMLElement {
             }
         })
     }
+
 
     connectedCallback() {
         this.toggleDrawer();
