@@ -13,7 +13,7 @@ JTNavbarTemplate.innerHTML = `
                     <i class="bi bi-list"></i>
                 </button>
                 <a href="/" class="flex flex-row h-full items-center">
-                    <img src="/assets/logo.webp" alt="logo" class='h-12 md:ml-2 w-auto'/>
+                    <img src="/assets/logo.webp" alt="logo" class='h-12 md:ml-2 w-auto rounded-lg'/>
                 </a>
                 <jt-smart-call-navbar-button></jt-smart-call-navbar-button>
                 <div class="hidden md:block ml-0 gap-4 w-full md:w-auto h-auto !text-2xl md:ml-auto md:my-auto px-2">
