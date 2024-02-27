@@ -45,10 +45,10 @@ class JTStaffList extends HTMLElement {
 		staff.forEach((member, idx, arr) => {
 			let el = JTStaffListItemTemplate.content.cloneNode(true);
 			el.querySelector("img").src = member.image;
-			el.querySelector("img").setAttribute("alt", member.firstName);
+			el.querySelector("img").setAttribute("alt", member.name);
 			el.querySelector(".staff-item").setAttribute("id", "staff-" + idx);
-			el.querySelector(".bio h1").innerHTML = member.firstName;
-			el.querySelector(".bio h2").innerHTML = member.title;
+			el.querySelector(".bio h1").innerHTML = member.name;
+			el.querySelector(".bio h2").innerHTML = member.jobTitle;
 			this.staffListRoot.appendChild(el);
 		});
 	}

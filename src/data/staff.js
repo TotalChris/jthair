@@ -1,27 +1,10 @@
-export const staff = [
-        {
-            firstName: "Jody",
-            title: "Stylist",
-            image: "/assets/team/jody.webp",
-        },
-        {
-            firstName: "Kathi",
-            title: "Stylist",
-            image: "/assets/team/kathi.webp",
-        },
-        {
-            firstName: "Stephanie",
-            title: "Stylist",
-            image: "/assets/team/stephanie.webp",
-        },
-        {
-            firstName: "Valerie",
-            title: "Stylist",
-            image: "/assets/team/valerie.webp",
-        },
-        {
-            firstName: "Lisa",
-            title: "Stylist",
-            image: "/assets/team/lisa.png",
-        }
-]
+const fetchStaff = async () => {
+    const sanityQuery = encodeURIComponent(`*[_type == "employee"]{_createdAt, name, jobTitle, "image": image.asset->url} | order(_createdAt asc)`);
+    const sanityURL = import.meta.env.VITE_SANITY_ENDPOINT + sanityQuery;
+    const response = await fetch(sanityURL);
+    const data = await response.json();
+    console.log(data.result)
+    return data.result;
+}
+
+export const staff = await fetchStaff();
