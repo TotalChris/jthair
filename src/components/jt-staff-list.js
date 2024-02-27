@@ -1,5 +1,5 @@
 import stylesheet from "../styles/index.css?inline";
-import { staff } from "../data/staff";
+import fetchStaff from "../data/fetchStaff";
 const JTStaffListItemTemplate = document.createElement("template");
 JTStaffListItemTemplate.innerHTML = `
         <div class="staff-item" id="">
@@ -42,19 +42,19 @@ class JTStaffList extends HTMLElement {
 			JTStaffListTemplate.content.cloneNode(true)
 		);
 		this.staffListRoot = this.shadowRoot.querySelector("#staffListRoot");
-		staff.forEach((member, idx, arr) => {
-			let el = JTStaffListItemTemplate.content.cloneNode(true);
-			el.querySelector("img").src = member.image;
-			el.querySelector("img").setAttribute("alt", member.firstName);
-			el.querySelector(".staff-item").setAttribute("id", "staff-" + idx);
-			el.querySelector(".bio h1").innerHTML = member.firstName;
-			el.querySelector(".bio h2").innerHTML = member.title;
-			this.staffListRoot.appendChild(el);
-		});
 	}
 
-	connectedCallback() {
-
+	async connectedCallback() {
+        const staff = await fetchStaff();
+        staff.forEach((member, idx, arr) => {
+			let el = JTStaffListItemTemplate.content.cloneNode(true);
+			el.querySelector("img").src = member.image;
+			el.querySelector("img").setAttribute("alt", member.name);
+			el.querySelector(".staff-item").setAttribute("id", "staff-" + idx);
+			el.querySelector(".bio h1").innerHTML = member.name;
+			el.querySelector(".bio h2").innerHTML = member.jobTitle;
+			this.staffListRoot.appendChild(el);
+		});
 	}
 
 }

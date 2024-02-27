@@ -1,5 +1,5 @@
 import stylesheet from "../styles/index.css?inline";
-import { staff } from "../data/staff";
+import fetchStaff from "../data/fetchStaff";
 const JTStaffMemberTemplate = document.createElement("template");
 JTStaffMemberTemplate.innerHTML = `
         <div class="carousel-item" id="">
@@ -72,14 +72,15 @@ class JTStaffCarousel extends HTMLElement {
 		});
 	}
 
-	connectedCallback() {
+	async connectedCallback() {
+		const staff = await fetchStaff()
 		staff.forEach((member, idx, arr) => {
 			let el = JTStaffMemberTemplate.content.cloneNode(true);
 			el.querySelector("img").src = member.image;
-			el.querySelector("img").setAttribute("alt", member.firstName);
+			el.querySelector("img").setAttribute("alt", member.name);
 			el.querySelector(".carousel-item").setAttribute("id", "staff-" + idx);
-			el.querySelector(".bio h1").innerHTML = member.firstName;
-			el.querySelector(".bio h2").innerHTML = member.title;
+			el.querySelector(".bio h1").innerHTML = member.name;
+			el.querySelector(".bio h2").innerHTML = member.jobTitle;
 			el.querySelector("img").classList.add("opacity-40");
 			if (idx === 0) {
 				el.querySelector("img").classList.remove("opacity-40");
