@@ -4,6 +4,26 @@ const JTHoursTableTemplate = document.createElement("template");
 JTHoursTableTemplate.innerHTML = `
     <style>
         ${stylesheet}
+        .hours-table {
+            background: transparent;
+        }
+        table {
+            margin-top: 1rem;
+        }
+        td {
+            border-bottom: 0px;
+        }
+        td:first-child {
+            padding-left: 5px;
+        }
+        td:last-child {
+            min-width: 130px;
+            padding-right: 5px;
+        }
+        tbody tr td:last-child,
+        thead tr th:last-child {
+            border-left: 1px solid black;
+        }
         .openHour{
         	min-width: 130px;
         }

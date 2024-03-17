@@ -25,7 +25,7 @@ JTStaffCarouselTemplate.innerHTML = `
             opacity: 1;
         }
     </style>
-    <div class="carousel carousel-center mx-auto w-full gap-8 overflow-y-hidden cursor-grab select-none" id="staffCarousel" style="scroll-behavior: smooth;"></div>
+    <div class="carousel carousel-center mx-auto mt-16 w-full gap-8 overflow-y-hidden cursor-grab select-none" id="staffCarousel" style="scroll-behavior: smooth;"></div>
 `;
 class JTStaffCarousel extends HTMLElement {
 	constructor() {
