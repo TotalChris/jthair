@@ -55,14 +55,6 @@ const changePage = async () => {
     pageRoot.appendChild(fragment.body.children[0]);
     document.title = 'JT Hair Care of Brighton | ' + title;
     document.querySelector('meta[name="description"]').setAttribute('content', description)
-    document.querySelectorAll('a.inner-navlink').forEach((el) => {
-        el.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.history.pushState({}, "", e.target.href);
-            document.querySelector('jt-navbar').setActiveLink(e.target.href);
-            handleLocation();
-        });
-    })
 }
 
 const handleLocation = async (force) => {
@@ -77,6 +69,14 @@ const handleLocation = async (force) => {
     } else {
         await changePage();
         pageRoot.classList.add('slide-in-bottom-longer');
+        document.querySelectorAll('a.inner-navlink').forEach((el) => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.history.pushState({}, "", e.target.href);
+                document.querySelector('jt-navbar').setActiveLink(e.target.href);
+                handleLocation();
+            });
+        })
     }
 }
 
