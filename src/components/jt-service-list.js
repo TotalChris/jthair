@@ -90,7 +90,7 @@ class JtServiceList extends HTMLElement {
 		});
 
 		this.shiftHeader = (e) => {
-			if(window.scrollY > 325){
+			if(window.scrollY > 280){
 				this.serviceBanner.classList.add('expand')
 			} else {
 				this.serviceBanner.classList.remove('expand')

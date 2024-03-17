@@ -40,13 +40,20 @@ const changePage = async () => {
     const route = routes[window.location.pathname] || window.location.pathname + '.html';
     const title = pageTitles[window.location.pathname] || pageTitles[404];
     const description = pageDescriptions[window.location.pathname] || pageDescriptions[404];
-    pageRoot.innerHTML = await fetch(route).then(async (data) => {
-        if(!data.ok){
-            return await fetch(routes[404]).then((data) => data.text());
-        } else {
-            return data.text();
+    pageRoot.innerHTML = ""
+    let fragment = new DOMParser().parseFromString(
+        await fetch(route).then(async (data) => {
+            if(!data.ok){
+                return await fetch(routes[404]).then((data) => data.text());
+            } else {
+                return data.text();
+            }
+        }), 'text/html', {
+            includeShadowRoots: true
         }
-    });    document.title = 'JT Hair Care of Brighton | ' + title;
+    );
+    pageRoot.appendChild(fragment.body.children[0]);
+    document.title = 'JT Hair Care of Brighton | ' + title;
     document.querySelector('meta[name="description"]').setAttribute('content', description)
     document.querySelectorAll('a.inner-navlink').forEach((el) => {
         el.addEventListener('click', (e) => {
