@@ -12,13 +12,13 @@ JTHoursTableTemplate.innerHTML = `
         }
         td {
             border-bottom: 0px;
+            padding-inline: 10px;
         }
         td:first-child {
             padding-left: 5px;
         }
         td:last-child {
             min-width: 130px;
-            padding-right: 5px;
         }
         tbody tr td:last-child,
         thead tr th:last-child {

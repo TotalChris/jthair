@@ -3,8 +3,8 @@ const JTServiceCardTemplate = document.createElement("template");
 JTServiceCardTemplate.innerHTML = `
 <style>${stylesheet}</style>
     <div class="stats shadow" id="cardRoot">
-        <div class="bg-accent-content gap-2 jt-price-card bg-cover">
-            <div class='w-full h-full jt-price-card stat'>
+        <div class="bg-accent-content gap-2 bg-black bg-cover">
+            <div class='w-full h-full bg-black stat'>
                 <div class="stat-title text-white" id="serviceName"></div>
                 <div class="stat-value bg-jt-grad-text" id="servicePrice"></div>
                 <div class="stat-desc text-neutral-300" id="serviceDescription"></div>
