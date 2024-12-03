@@ -11,8 +11,8 @@ export const hours = [
         id: "1",
         day: "Monday",
         isOpen: false,
-        start: '10 AM',
-        end: '5 PM',
+        start: '9 AM',
+        end: '4 PM',
         restricted: false,
     },
     {
