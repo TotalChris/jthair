@@ -15,10 +15,9 @@
     "vite": "^4.5.3"
   },
   "dependencies": {
-    "daisyui": "^2.51.5",
+    "daisyui": "^4.12.20",
     "dotenv": "^16.3.1",
     "firebase": "^10.6.0",
-    "puppeteer": "^20.1.2",
     "web-vitals": "^3.5.0"
   }
 }
