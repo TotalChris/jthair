@@ -23,8 +23,8 @@ JtMainCarouselTemplate.innerHTML = `
                 max-width: 500px;
                 width: 85vw;
                 min-height: 300px;
-                background-position: center;
-                background-size: cover;
+                object-position: center;
+                object-fit: cover;
                 background-color: #f0f0f0;
             }
             .wavy-circle {
@@ -78,16 +78,16 @@ JtMainCarouselTemplate.innerHTML = `
         </style>
         <div id="carouselScaffold">
             <div id='carousel'>
-                <div style=" background-image: url('/assets/woman2.webp'); " class="childImage"></div>
-                <div style=" background-image: url('/assets/woman1.webp'); " class="childImage"></div>
-                <div style=" background-image: url('/assets/womenscut.webp'); " class="childImage"></div>
-                <div style=" background-image: url('/assets/menscut.webp'); " class="childImage"></div>
-                <div style=" background-image: url('/assets/tools.webp'); " class="childImage"></div>                    
-                <div style=" background-image: url('/assets/woman2.webp'); " class="childImage"></div>
-                <div style=" background-image: url('/assets/woman1.webp'); " class="childImage"></div>
-                <div style=" background-image: url('/assets/womenscut.webp'); " class="childImage"></div>
-                <div style=" background-image: url('/assets/menscut.webp'); " class="childImage"></div>
-                <div style=" background-image: url('/assets/tools.webp'); " class="childImage"></div>
+                <img src="/assets/woman2.webp" class="childImage">
+                <img src="/assets/woman1.webp" class="childImage">
+                <img src="/assets/womenscut.webp" class="childImage">
+                <img src="/assets/menscut.webp" class="childImage">
+                <img src="/assets/tools.webp" class="childImage">
+                <img src="/assets/woman2.webp" class="childImage">
+                <img src="/assets/woman1.webp" class="childImage">
+                <img src="/assets/womenscut.webp" class="childImage">
+                <img src="/assets/menscut.webp" class="childImage">
+                <img src="/assets/tools.webp" class="childImage">
             </div>
             <div class="wavy-circle">
                 <div class="sticker-text emphasis">JT Body Care</div>
